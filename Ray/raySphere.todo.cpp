@@ -8,7 +8,25 @@
 //  Ray-tracing stuff //
 ////////////////////////
 double RaySphere::intersect(Ray3D ray,RayIntersectionInfo& iInfo,double mx){
-	return -1;
+	Point3D rToC =  this->center - ray.position;
+	double d = rToC.dot(ray.direction.unit());
+
+	// No intersection if sphere center is "behind" ray
+	if (d < 0)
+		return -1;
+
+	double f = sqrt(rToC.squareNorm() - d * d);
+
+	// No intersection if ray line is further than sphere radius away from circle center
+	if (f > this->radius)
+		return -1;
+
+	// Calculate intersection info
+	double rayDist = d - sqrt(this->radius * this->radius - f * f);
+	iInfo.iCoordinate = ray(rayDist) * ray.direction.length();
+	iInfo.normal = (iInfo.iCoordinate - this->center).unit();
+
+	return rayDist;
 }
 BoundingBox3D RaySphere::setBoundingBox(void){
 	return bBox;
