@@ -21,10 +21,15 @@ double RaySphere::intersect(Ray3D ray,RayIntersectionInfo& iInfo,double mx){
 	if (f > this->radius)
 		return -1;
 
-	// Calculate intersection info
+	// Ignore intersections further away than mx
 	double rayDist = d - sqrt(this->radius * this->radius - f * f);
+	if (mx > 0 && rayDist >= mx)
+		return -1;
+
+	// Calculate intersection info
 	iInfo.iCoordinate = ray(rayDist) * ray.direction.length();
 	iInfo.normal = (iInfo.iCoordinate - this->center).unit();
+	iInfo.material = this->material;
 
 	return rayDist;
 }

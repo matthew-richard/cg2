@@ -17,11 +17,25 @@ int RayScene::Refract(Point3D v,Point3D n,double ir,Point3D& refract){
 }
 
 Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
-	return Ray3D();
+	Ray3D result;
+	result.position = camera->position;
+
+	Point3D forward = camera->direction.unit();
+	Point3D up = camera->up.unit();
+	Point3D right = forward.crossProduct(up);
+	double planeHeight = 2 * tan(camera->heightAngle / 2);
+	double planeWidth = 2 * tan(camera->heightAngle * camera->aspectRatio / 2);
+
+	result.direction = forward + up * ((0.5 - (double)j / (height - 1)) * planeHeight )
+							   + right * (((double)i / (width - 1) - 0.5) * planeWidth);
+
+	return result;
 }
 
 Point3D RayScene::GetColor(Ray3D ray,int rDepth,Point3D cLimit){
-	return Point3D();
+	RayIntersectionInfo iInfo;
+	double result = group->intersect(ray, iInfo, -1);
+	return result < 0 ? this->background : (iInfo.material->ambient + iInfo.material->emissive);
 }
 
 //////////////////
