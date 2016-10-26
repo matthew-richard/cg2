@@ -17,6 +17,8 @@ int RayScene::Refract(Point3D v,Point3D n,double ir,Point3D& refract){
 }
 
 Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
+
+
 	Ray3D result;
 	result.position = camera->position;
 
@@ -26,7 +28,7 @@ Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
 	double planeHeight = 2 * tan(camera->heightAngle / 2);
 	double planeWidth = 2 * tan(camera->heightAngle * camera->aspectRatio / 2);
 
-	result.direction = forward + up * ((0.5 - (double)j / (height - 1)) * planeHeight )
+	result.direction = forward + up * (((double)j / (height - 1) - 0.5) * planeHeight )
 							   + right * (((double)i / (width - 1) - 0.5) * planeWidth);
 
 	return result;
