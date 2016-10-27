@@ -23,6 +23,11 @@ double RayTriangle::intersect(Ray3D ray,RayIntersectionInfo& iInfo,double mx){
 	Point3D world_p = ray(t);
 	Point3D p = world_p - v[0]->position;
 
+	// No intersection when ray hits back of plane
+	// (disabled to enable directional lights to cast shadows)
+	/* if (plane.normal.dot(ray.position - world_p) < 0)
+		return -1; */
+
 	// Solve for barycentric coords
 	double det, gamma, beta, alpha;
 

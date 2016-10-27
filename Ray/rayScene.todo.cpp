@@ -46,8 +46,18 @@ Point3D RayScene::GetColor(Ray3D ray,int rDepth,Point3D cLimit){
 	for (int i = 0; i < this->lightNum; i++) {
 		RayLight& l = *this->lights[i];
 
-		color += l.getDiffuse(camera->position, iInfo);
-		color += l.getSpecular(camera->position, iInfo);
+		int inShadow = 0;
+		for (int j = 0; j < group->shapeNum(); j++) {
+			if (l.isInShadow(iInfo, group->shapes[j])) {
+				inShadow = 1;
+				break;
+			}
+		}
+
+		if (!inShadow) {
+			color += l.getDiffuse(camera->position, iInfo);
+			color += l.getSpecular(camera->position, iInfo);
+		}
 
 	}
 	return color;

@@ -31,7 +31,8 @@ Point3D RayPointLight::getSpecular(Point3D cameraPosition,RayIntersectionInfo& i
 	return iInfo.material->specular * this->color * intensity * strength;
 }
 int RayPointLight::isInShadow(RayIntersectionInfo& iInfo,RayShape* shape){
-	return 0;
+	Ray3D ray = Ray3D(iInfo.iCoordinate, (this->location - iInfo.iCoordinate).unit());
+	return shape->intersect(ray, RayIntersectionInfo(), (this->location - iInfo.iCoordinate).length()) > 0;
 }
 Point3D RayPointLight::transparency(RayIntersectionInfo& iInfo,RayShape* shape,Point3D cLimit){
 	return Point3D(1,1,1);
