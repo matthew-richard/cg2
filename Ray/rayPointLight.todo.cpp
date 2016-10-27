@@ -14,7 +14,21 @@ Point3D RayPointLight::getDiffuse(Point3D cameraPosition,RayIntersectionInfo& iI
 	return iInfo.material->diffuse * this->color * intensity * (strength >= 0 ? strength : 0);
 }
 Point3D RayPointLight::getSpecular(Point3D cameraPosition,RayIntersectionInfo& iInfo){
-	return Point3D();
+	Point3D toLight = (this->location - iInfo.iCoordinate).unit();
+	Point3D toCamera = (cameraPosition - iInfo.iCoordinate).unit();
+	double projection = iInfo.normal.dot(toCamera);
+	Point3D reflection = iInfo.normal * projection + -(toCamera - iInfo.normal * projection);
+
+	double cos_angle = toLight.dot(reflection.unit());
+	if (cos_angle < 0)
+		return Point3D();
+
+	double strength = pow(cos_angle, iInfo.material->specularFallOff);
+
+	double dist = (this->location - iInfo.iCoordinate).length();
+	double intensity = 1 / (this->constAtten + this->linearAtten * dist + this->quadAtten * dist * dist);
+
+	return iInfo.material->specular * this->color * intensity * strength;
 }
 int RayPointLight::isInShadow(RayIntersectionInfo& iInfo,RayShape* shape){
 	return 0;
