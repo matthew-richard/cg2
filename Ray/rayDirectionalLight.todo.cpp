@@ -8,7 +8,8 @@
 //  Ray-tracing stuff //
 ////////////////////////
 Point3D RayDirectionalLight::getDiffuse(Point3D cameraPosition,RayIntersectionInfo& iInfo){
-	return Point3D();
+	double strength = (-this->direction.unit()).dot(iInfo.normal);
+	return iInfo.material->diffuse * this->color * (strength >= 0 ? strength : 0);
 }
 Point3D RayDirectionalLight::getSpecular(Point3D cameraPosition,RayIntersectionInfo& iInfo){
 	return Point3D();

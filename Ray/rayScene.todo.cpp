@@ -36,8 +36,21 @@ Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
 
 Point3D RayScene::GetColor(Ray3D ray,int rDepth,Point3D cLimit){
 	RayIntersectionInfo iInfo;
-	double result = group->intersect(ray, iInfo, -1);
-	return result < 0 ? this->background : (iInfo.material->ambient + iInfo.material->emissive);
+	double iResult = group->intersect(ray, iInfo, -1);
+
+	if (iResult < 0) {
+		return this->background;
+	}
+
+	Point3D color = iInfo.material->ambient + iInfo.material->emissive;
+	for (int i = 0; i < this->lightNum; i++) {
+		RayLight& l = *this->lights[i];
+
+		color += l.getDiffuse(camera->position, iInfo);
+		color += l.getSpecular(camera->position, iInfo);
+
+	}
+	return color;
 }
 
 //////////////////
