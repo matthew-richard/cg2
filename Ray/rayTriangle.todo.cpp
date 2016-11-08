@@ -57,6 +57,8 @@ double RayTriangle::intersect(Ray3D ray,RayIntersectionInfo& iInfo,double mx){
 	iInfo.iCoordinate = world_p;
 	iInfo.material = this->material;
 	iInfo.normal = this->plane.normal;
+	iInfo.texCoordinate =
+		this->v[0]->texCoordinate * alpha + this->v[1]->texCoordinate * beta + this->v[2]->texCoordinate * gamma;
 
 	return t;
 }

@@ -8,7 +8,7 @@
 //  Ray-tracing stuff //
 ////////////////////////
 Point3D RayDirectionalLight::getDiffuse(Point3D cameraPosition,RayIntersectionInfo& iInfo){
-	double strength = (-this->direction.unit()).dot(iInfo.normal);
+	double strength = (-this->direction.unit()).dot(iInfo.normal.unit());
 	return iInfo.material->diffuse * this->color * (strength >= 0 ? strength : 0);
 }
 Point3D RayDirectionalLight::getSpecular(Point3D cameraPosition,RayIntersectionInfo& iInfo){
@@ -29,6 +29,10 @@ int RayDirectionalLight::isInShadow(RayIntersectionInfo& iInfo,RayShape* shape){
 	return shape->intersect(ray, RayIntersectionInfo()) > 0;
 }
 Point3D RayDirectionalLight::transparency(RayIntersectionInfo& iInfo,RayShape* shape,Point3D cLimit){
+	Ray3D ray = Ray3D(iInfo.iCoordinate, -this->direction.unit());
+	RayIntersectionInfo tempInfo;
+	if (shape->intersect(ray, tempInfo) > 0)
+		return tempInfo.material->transparent;
 	return Point3D(1,1,1);
 }
 

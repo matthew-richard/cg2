@@ -31,6 +31,12 @@ double RaySphere::intersect(Ray3D ray,RayIntersectionInfo& iInfo,double mx){
 	iInfo.normal = (iInfo.iCoordinate - this->center).unit();
 	iInfo.material = this->material;
 
+	// latitude (between 0 and 1)
+	iInfo.texCoordinate[0] = (asin(iInfo.normal[1]) / (PI / 2)) + 1;
+
+	// longitude (between 0 and 1)
+	iInfo.texCoordinate[1] = (acos(iInfo.normal[2]) + PI) / (2 * PI);
+
 	return rayDist;
 }
 BoundingBox3D RaySphere::setBoundingBox(void){

@@ -3,17 +3,31 @@
 #include <GL/glut.h>
 #include <math.h>
 
+#define REF_EPSILON 0.00001
 
 ///////////////////////
 // Ray-tracing stuff //
 ///////////////////////
 
 Point3D RayScene::Reflect(Point3D v,Point3D n){
-	return Point3D();
+	v = -v.unit();
+	n = n.unit();
+
+	Point3D projected = n * v.dot(n);
+
+	return (projected - (v - projected)).unit();
 }
 
 int RayScene::Refract(Point3D v,Point3D n,double ir,Point3D& refract){
-	return 0;
+	Point3D incidence = -v.unit();
+	Point3D normal = n.unit();
+	double sin_incidence = n.crossProduct(v).length() / ir;
+
+	if (sin_incidence > 1) return 0;
+	double theta_reflected = asin(sin_incidence);
+
+	refract = normal * ((1 / ir) * incidence.dot(normal) - cos(theta_reflected)) - incidence * (1 / ir);
+	return 1;
 }
 
 Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
@@ -34,32 +48,82 @@ Ray3D RayScene::GetRay(RayCamera* camera,int i,int j,int width,int height){
 	return result;
 }
 
-Point3D RayScene::GetColor(Ray3D ray,int rDepth,Point3D cLimit){
+Point3D RayScene::GetColor(Ray3D ray, int rDepth, Point3D cLimit) {
+
 	RayIntersectionInfo iInfo;
 	double iResult = group->intersect(ray, iInfo, -1);
-
 	if (iResult < 0) {
-		return this->background;
+		int fromCamera = 1;
+		for (int i = 0; i < 3; i++)
+			if (ray.position[i] != camera->position[i])
+				{ fromCamera = 0; break; }
+		return fromCamera ? this->background : Point3D(0,0,0);
 	}
 
+	// Rays "pass through" the backsides of shapes 
+	if (ray.direction.dot(iInfo.normal) > 0) {
+		ray.position = iInfo.iCoordinate + ray.direction * REF_EPSILON;
+		return GetColor(ray, rDepth, cLimit);
+	}
+
+	rDepth--;
 	Point3D color = iInfo.material->ambient + iInfo.material->emissive;
+
+	// Add reflection
+	int cutOffReflect = 1;
+	for (int i = 0; i < 3; i++)
+		if (iInfo.material->specular[i] > cLimit[i])
+			cutOffReflect = 0;
+
+
+	if (rDepth > 0 && !cutOffReflect) {
+		Ray3D reflect;
+		reflect.direction = Reflect(ray.direction.unit(), iInfo.normal.unit());
+		reflect.position = iInfo.iCoordinate + reflect.direction * REF_EPSILON;
+		color += (Point3D(1,1,1) - iInfo.material->transparent) * iInfo.material->specular * this->GetColor(reflect, rDepth, cLimit / iInfo.material->specular);
+	}
+
+
+	// Add refraction
+	int cutOffRefract = 1;
+	for (int i = 0; i < 3; i++)
+		if (iInfo.material->transparent[i] > cLimit[i])
+			cutOffRefract = 0;
+
+	int belowCriticalAngle = 0;
+	if (rDepth > 0 && !cutOffRefract) {
+		Ray3D refract;
+		belowCriticalAngle = Refract(ray.direction.unit(), iInfo.normal.unit(), iInfo.material->refind, refract.direction);
+		if (belowCriticalAngle) {
+			refract.position = iInfo.iCoordinate + refract.direction * REF_EPSILON;
+			color += iInfo.material->transparent * this->GetColor(refract, rDepth, cLimit / iInfo.material->transparent);
+		}
+	}
+
 	for (int i = 0; i < this->lightNum; i++) {
 		RayLight& l = *this->lights[i];
 
-		int inShadow = 0;
+		Point3D t = Point3D(1,1,1);
 		for (int j = 0; j < group->shapeNum(); j++) {
-			if (l.isInShadow(iInfo, group->shapes[j])) {
-				inShadow = 1;
-				break;
-			}
+			t *= l.transparency(iInfo, group->shapes[j], cLimit / iInfo.material->transparent);
 		}
 
-		if (!inShadow) {
-			color += l.getDiffuse(camera->position, iInfo);
-			color += l.getSpecular(camera->position, iInfo);
+		if (iInfo.material->tex == NULL) {
+			color += t * l.getDiffuse(camera->position, iInfo);
 		}
+		else {
+			Pixel texVal = Pixel(iInfo.material->tex->img->BilinearSample(iInfo.texCoordinate[0], iInfo.texCoordinate[1]));
+			color += t * Point3D(texVal.r, texVal.g, texVal.b);
+		}
+		color += t * l.getSpecular(camera->position, iInfo);
 
 	}
+
+	for (int i = 0; i < 3; i++) {
+		if (color[i] < 0) color[i] = 0;
+		else if (color[i] > 1) color[i] = 1;
+	}
+
 	return color;
 }
 
