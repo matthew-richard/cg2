@@ -50,7 +50,12 @@ int StaticRayGroup::set(void){
 //////////////////
 
 int RayGroup::drawOpenGL(int materialIndex){
-	return -1;
+
+	for (int i = 0; i < this->shapeNum(); i++) {
+		if (shapes[i]->drawOpenGL(materialIndex) < 0)
+			return -1;
+	}
+	return 0;
 }
 
 /////////////////////
