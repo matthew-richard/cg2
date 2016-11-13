@@ -47,4 +47,28 @@ Point3D RayPointLight::transparency(RayIntersectionInfo& iInfo,RayShape* shape,P
 // OpenGL stuff //
 //////////////////
 void RayPointLight::drawOpenGL(int index){
+	GLfloat c[] = { this->color[0], this->color[1], this->color[2], 1 };
+	GLfloat p[] = { this->location[0], this->location[1], this->location[2], 1 };
+	GLfloat zero[] = { 0, 0, 0, 1 };
+
+	// Light is not infinitely far away (only affects specular)
+	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+
+	// Ambient light is contributed by materials, not individual lights
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, zero);
+
+	glLightfv(GL_LIGHT0 + index, GL_AMBIENT, zero);
+	glLightfv(GL_LIGHT0 + index, GL_SPECULAR, c);
+	glLightfv(GL_LIGHT0 + index, GL_DIFFUSE, c);
+
+	glLightfv(GL_LIGHT0 + index, GL_POSITION, p);
+
+	glLightf(GL_LIGHT0 + index, GL_SPOT_EXPONENT, 0);
+	glLighti(GL_LIGHT0 + index, GL_SPOT_CUTOFF, 180);
+
+	glLightf(GL_LIGHT0 + index, GL_CONSTANT_ATTENUATION, this->constAtten);
+	glLightf(GL_LIGHT0 + index, GL_LINEAR_ATTENUATION, this->linearAtten);
+	glLightf(GL_LIGHT0 + index, GL_QUADRATIC_ATTENUATION, this->quadAtten);
+
+	glEnable(GL_LIGHT0 + index);
 }

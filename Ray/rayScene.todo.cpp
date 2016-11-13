@@ -131,6 +131,23 @@ Point3D RayScene::GetColor(Ray3D ray, int rDepth, Point3D cLimit) {
 // OpenGL stuff //
 //////////////////
 void RayMaterial::drawOpenGL(void){
+	float alpha = 1 - (this->transparent[0] + this->transparent[1] + this->transparent[2]) / 3;
+	GLfloat d[] = { this->diffuse[0], this->diffuse[1], this->diffuse[2], alpha };
+	GLfloat s[] = { this->specular[0], this->specular[1], this->specular[2], alpha };
+	GLfloat e[] = { this->emissive[0], this->emissive[1], this->emissive[2], alpha };
+	GLfloat a[] = { this->ambient[0], this->ambient[1], this->ambient[2], alpha };
+	GLfloat one[] = { 1, 1, 1, 1 };
+
+	// TODO: transparency?
+
+	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, d);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, s);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, e);
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, a);
+
+	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, this->specularFallOff);
+
+	// TODO: textures?
 }
 void RayTexture::setUpOpenGL(void){
 }
