@@ -79,5 +79,5 @@ int RayTriangle::drawOpenGL(int materialIndex){
 		glVertex3f(v[2]->position[0], v[2]->position[1], v[2]->position[2]);
 	glEnd();
 
-	return -1;
+	return 0;
 }

@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\gl\</FILEPATH>
+      <FILENAME>glut.h</FILENAME>
+      <LINE>156</LINE>
+      <COLUMN>50</COLUMN>
+    </SFA>
+    <DEFECTCODE>28251</DEFECTCODE>
+    <DESCRIPTION>Inconsistent annotation for 'exit': this instance has no annotations. See c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdlib.h(50). </DESCRIPTION>
+    <FUNCTION>exit</FUNCTION>
+    <DECORATED>exit</DECORATED>
+    <FUNCLINE>156</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>621</LINE>
+      <COLUMN>9</COLUMN>
+    </SFA>
+    <DEFECTCODE>6031</DEFECTCODE>
+    <DESCRIPTION>Return value ignored: 'fscanf'.</DESCRIPTION>
+    <FUNCTION>RayScene::read</FUNCTION>
+    <DECORATED>?read@RayScene@@QEAAHPEAU_iobuf@@H@Z</DECORATED>
+    <FUNCLINE>228</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>265</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6054</DEFECTCODE>
+    <DESCRIPTION>String 'keyword' might not be zero-terminated.</DESCRIPTION>
+    <FUNCTION>RayScene::read</FUNCTION>
+    <DECORATED>?read@RayScene@@QEAAHPEAU_iobuf@@H@Z</DECORATED>
+    <FUNCLINE>228</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>229</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>This expression may not zero-terminate 'keyword'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>230</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>231</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>232</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>232</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>40</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>233</LINE>
+        <COLUMN>48</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>234</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>235</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>236</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>239</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>240</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>242</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>243</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>244</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>245</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>246</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>247</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>248</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>249</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>250</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>251</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>252</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>253</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>254</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>255</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>258</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Output from 'fscanf' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h:1193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>258</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'fscanf(fp, " #%s", keyword)==1')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>259</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>265</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Input to 'strcmp' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h:95)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>265</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'keyword' is required to be zero-terminated by a SAL annotation on 'strcmp'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>679</LINE>
+      <COLUMN>5</COLUMN>
+    </SFA>
+    <DEFECTCODE>6054</DEFECTCODE>
+    <DESCRIPTION>String 'keyword' might not be zero-terminated.</DESCRIPTION>
+    <FUNCTION>RayScene::ParseGroup</FUNCTION>
+    <DECORATED>?ParseGroup@RayScene@@AEAAXPEAU_iobuf@@AEAHPEAVRayGroup@@@Z</DECORATED>
+    <FUNCLINE>668</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>669</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>This expression may not zero-terminate 'keyword'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>670</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>670</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>671</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>672</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>673</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>674</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>675</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>677</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Output from 'fscanf' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h:1193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>677</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'fscanf(fp, " #%s", keyword)==1')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>678</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>679</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Input to 'strcmp' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h:95)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>679</LINE>
+        <COLUMN>5</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'keyword' is required to be zero-terminated by a SAL annotation on 'strcmp'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>708</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>6054</DEFECTCODE>
+    <DESCRIPTION>String 'paramName' might not be zero-terminated.</DESCRIPTION>
+    <FUNCTION>RayScene::ParseJoint</FUNCTION>
+    <DECORATED>?ParseJoint@RayScene@@AEAAXPEAU_iobuf@@AEAHPEAVRayGroup@@@Z</DECORATED>
+    <FUNCLINE>692</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>693</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>This expression may not zero-terminate 'paramName'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>694</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>696</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>697</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>700</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'paramName' is an Output from 'fscanf' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h:1193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!fscanf(fp, " %s ", paramName)' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'i&lt;keyFileNum' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>706</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>707</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>708</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'paramName' is an Input to 'strcpy' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h:119)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>708</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'paramName' is required to be zero-terminated by a SAL annotation on 'strcpy'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>708</LINE>
+      <COLUMN>7</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'newNode'. </DESCRIPTION>
+    <FUNCTION>RayScene::ParseJoint</FUNCTION>
+    <DECORATED>?ParseJoint@RayScene@@AEAAXPEAU_iobuf@@AEAHPEAVRayGroup@@@Z</DECORATED>
+    <FUNCLINE>692</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>693</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>694</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>696</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>697</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>700</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>706</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>707</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'newNode' may be NULL (Enter this branch)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>707</LINE>
+        <COLUMN>28</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>708</LINE>
+        <COLUMN>7</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'newNode' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>rayscene.cpp</FILENAME>
+      <LINE>714</LINE>
+      <COLUMN>35</COLUMN>
+    </SFA>
+    <DEFECTCODE>6054</DEFECTCODE>
+    <DESCRIPTION>String 'keyword' might not be zero-terminated.</DESCRIPTION>
+    <FUNCTION>RayScene::ParseJoint</FUNCTION>
+    <DECORATED>?ParseJoint@RayScene@@AEAAXPEAU_iobuf@@AEAHPEAVRayGroup@@@Z</DECORATED>
+    <FUNCLINE>692</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>693</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>694</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>This expression may not zero-terminate 'keyword'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>696</LINE>
+        <COLUMN>23</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>697</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>698</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>700</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>701</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>702</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'i&lt;keyFileNum' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>706</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>707</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>708</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>709</LINE>
+        <COLUMN>19</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>710</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>712</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Output from 'fscanf' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h:1193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>712</LINE>
+        <COLUMN>33</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'fscanf(fp, " #%s", keyword)==1')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>713</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>714</LINE>
+        <COLUMN>35</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'keyword' is an Input to 'strcmp' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h:95)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>rayscene.cpp</FILENAME>
+        <LINE>714</LINE>
+        <COLUMN>35</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'keyword' is required to be zero-terminated by a SAL annotation on 'strcmp'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

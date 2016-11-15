@@ -56,5 +56,5 @@ int RaySphere::drawOpenGL(int materialIndex){
 	glShadeModel(GL_SMOOTH);
 	gluSphere(s, this->radius, this->openGLComplexity, this->openGLComplexity);
 
-	return -1;
+	return 0;
 }

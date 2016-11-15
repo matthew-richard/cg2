@@ -43,7 +43,6 @@ void RayDirectionalLight::drawOpenGL(int index){
 	GLfloat c[] = { this->color[0], this->color[1], this->color[2], 1 };
 	GLfloat d[] = { this->direction[0], this->direction[1], -this->direction[2] };
 	GLfloat zero[] = { 0, 0, 0, 1 };
-	GLfloat one[] = { 1, 1, 1, 1 };
 
 	// 0 at the end indicates that this is a directional light.
 	GLfloat p[] = { -d[0], -d[1], -d[2], 0 };

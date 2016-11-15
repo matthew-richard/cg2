@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+      <FILENAME>svd.inl</FILENAME>
+      <LINE>746</LINE>
+      <COLUMN>30</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'p'. See line 734 for an earlier location where this can occur</DESCRIPTION>
+    <FUNCTION>num_svd</FUNCTION>
+    <DECORATED>??$num_svd@N@@YAXPEBNHHPEAN11@Z</DECORATED>
+    <FUNCLINE>724</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>729</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'g' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>730</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonalize' (declared on line 551)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>733</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonal_svd' (declared on line 612)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>740</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>740</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>741</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'w[i]&gt;w[i-1]')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>743</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>744</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>alias</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>(alias) 'p' receives the value of 'g' (which may be NULL)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>745</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>745</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'k&lt;m' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>746</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>746</LINE>
+        <COLUMN>16</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'k&lt;n')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>746</LINE>
+        <COLUMN>30</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'p' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+      <FILENAME>svd.inl</FILENAME>
+      <LINE>734</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'g':  the readable size is '(unsigned int)(m)*((n))*sizeof(REAL)' bytes, but '32' bytes may be read.</DESCRIPTION>
+    <FUNCTION>num_svd</FUNCTION>
+    <DECORATED>??$num_svd@N@@YAXPEBNHHPEAN11@Z</DECORATED>
+    <FUNCLINE>724</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>729</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'g' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>730</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonalize' (declared on line 551)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>733</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonal_svd' (declared on line 612)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>31</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>22</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'n' may equal 1 (Continue this loop)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'g', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+      <FILENAME>svd.inl</FILENAME>
+      <LINE>734</LINE>
+      <COLUMN>31</COLUMN>
+    </SFA>
+    <DEFECTCODE>6011</DEFECTCODE>
+    <DESCRIPTION>Dereferencing NULL pointer 'g'. </DESCRIPTION>
+    <FUNCTION>num_svd</FUNCTION>
+    <DECORATED>??$num_svd@N@@YAXPEBNHHPEAN11@Z</DECORATED>
+    <FUNCLINE>724</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>726</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>727</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>729</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'g' may be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>730</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonalize' (declared on line 551)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>733</LINE>
+        <COLUMN>18</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'g' is an In/Out argument to 'bidiagonal_svd' (declared on line 612)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>734</LINE>
+        <COLUMN>31</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'g' is dereferenced, but may still be NULL</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+      <FILENAME>svd.inl</FILENAME>
+      <LINE>589</LINE>
+      <COLUMN>27</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'v':  the readable size is '(unsigned int)(n)*((n))*sizeof(REAL)' bytes, but '16' bytes may be read.</DESCRIPTION>
+    <FUNCTION>bidiagonalize</FUNCTION>
+    <DECORATED>??$bidiagonalize@N@@YAXPEBNHHPEAN11@Z</DECORATED>
+    <FUNCLINE>551</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>557</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>558</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>558</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'v' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>561</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>562</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'v' is an In/Out argument to 'memset' (declared at d:\program files (x86)\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>565</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>568</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>568</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>570</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>572</LINE>
+        <COLUMN>21</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'v' is an In/Out argument to 'householder_zero_row' (declared on line 193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>568</LINE>
+        <COLUMN>24</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>568</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Exit this loop, ('i&lt;min' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>578</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'min!=n')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>579</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'v' is an In/Out argument to 'clr_bot_supdiag_elt' (declared on line 327)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>582</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'min!=m' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>587</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this branch, (assume 'min!=n')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;n')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>11</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'j&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>589</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>39</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>12</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Exit this loop, ('j&lt;min' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>12</COLUMN>
+        <KEYEVENT>
+          <ID>13</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'n' may equal 2 (Continue this loop)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>27</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>588</LINE>
+        <COLUMN>32</COLUMN>
+        <KEYEVENT>
+          <ID>14</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'j&lt;min')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>589</LINE>
+        <COLUMN>27</COLUMN>
+        <KEYEVENT>
+          <ID>15</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'v', (outside its readable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+      <FILENAME>svd.inl</FILENAME>
+      <LINE>564</LINE>
+      <COLUMN>41</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'v':  the writable size is '(unsigned int)(n)*((n))*sizeof(REAL)' bytes, but '32' bytes might be written.</DESCRIPTION>
+    <FUNCTION>bidiagonalize</FUNCTION>
+    <DECORATED>??$bidiagonalize@N@@YAXPEBNHHPEAN11@Z</DECORATED>
+    <FUNCLINE>551</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>8</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>553</LINE>
+        <COLUMN>13</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>9</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>21</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>554</LINE>
+        <COLUMN>33</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>557</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>558</LINE>
+        <COLUMN>12</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>558</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'v' is a 0 byte array</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>561</LINE>
+        <COLUMN>4</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>562</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'v' is an In/Out argument to 'memset' (declared at d:\program files (x86)\microsoft visual studio 14.0\vc\include\vcruntime_string.h:60)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>563</LINE>
+        <COLUMN>15</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;n')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>41</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>20</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>15</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'n' may equal 1 (Continue this loop)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\svd\</FILEPATH>
+        <FILENAME>svd.inl</FILENAME>
+        <LINE>564</LINE>
+        <COLUMN>41</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'v', (outside its writable range)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

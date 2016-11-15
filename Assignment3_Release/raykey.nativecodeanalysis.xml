@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>raykey.cpp</FILENAME>
+      <LINE>41</LINE>
+      <COLUMN>10</COLUMN>
+    </SFA>
+    <DEFECTCODE>6246</DEFECTCODE>
+    <DESCRIPTION>Local declaration of 'i' hides declaration of the same name in outer scope. For additional information, see previous declaration at line '37' of 'c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\raykey.cpp'.</DESCRIPTION>
+    <FUNCTION>RayKeyFile::read</FUNCTION>
+    <DECORATED>?read@RayKeyFile@@QEAAHPEAD@Z</DECORATED>
+    <FUNCLINE>34</FUNCLINE>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>raykey.cpp</FILENAME>
+      <LINE>67</LINE>
+      <COLUMN>11</COLUMN>
+    </SFA>
+    <DEFECTCODE>6054</DEFECTCODE>
+    <DESCRIPTION>String 'temp' might not be zero-terminated.</DESCRIPTION>
+    <FUNCTION>RayKeyFile::read</FUNCTION>
+    <DECORATED>?read@RayKeyFile@@QEAAHPEAD@Z</DECORATED>
+    <FUNCLINE>34</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>3</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>35</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>36</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>37</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>38</LINE>
+        <COLUMN>6</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>This expression may not zero-terminate 'temp'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>40</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'pNames' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>44</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'keyTransforms' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>45</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>46</LINE>
+        <COLUMN>14</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>48</LINE>
+        <COLUMN>3</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>49</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!fp' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>51</LINE>
+        <COLUMN>37</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>55</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>56</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!pNames' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>60</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;pNum')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>61</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'temp' is an Output from 'fscanf' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h:1193)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>61</LINE>
+        <COLUMN>28</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume 'fscanf(fp, " %s ", &amp;temp)!=1' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>67</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'temp' is an Input to 'strlen' (declared at c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h:215)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>67</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>11</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'temp' is required to be zero-terminated by a SAL annotation on 'strlen'</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>raykey.cpp</FILENAME>
+      <LINE>234</LINE>
+      <COLUMN>20</COLUMN>
+    </SFA>
+    <DEFECTCODE>6385</DEFECTCODE>
+    <DESCRIPTION>Reading invalid data from 'sampleData':  the readable size is 'keyFile.public: int __cdecl RayKeyFile::parameters(void)()*8' bytes, but '16' bytes may be read.</DESCRIPTION>
+    <FUNCTION>RayKeyData::set</FUNCTION>
+    <DECORATED>?set@RayKeyData@@QEAAHAEAVRayKeyFile@@H@Z</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>213</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!sampleData' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>17</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>10</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;pNum')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'type' ) resolves to case 0: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>234</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>238</LINE>
+        <COLUMN>11</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this loop, (assume 'j&lt;keyFile.samples()' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>6</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'i' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>216</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>7</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'i&lt;pNum')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>217</LINE>
+        <COLUMN>9</COLUMN>
+        <KEYEVENT>
+          <ID>8</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Assume switch ( 'type' ) resolves to case 0: </MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>218</LINE>
+        <COLUMN>2</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>219</LINE>
+        <COLUMN>16</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>234</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>9</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>'i' is an Output from 'VParameterSamples::set' (declared at c:\users\matt\google drive\career\school\computer graphics\assignments\2\util\parametersamples.h:13)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>234</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>10</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '&lt;branch condition&gt;' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>234</LINE>
+        <COLUMN>20</COLUMN>
+        <KEYEVENT>
+          <ID>11</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid read from 'sampleData[1]', (readable range is 0 to 0)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+      <FILENAME>raykey.cpp</FILENAME>
+      <LINE>215</LINE>
+      <COLUMN>34</COLUMN>
+    </SFA>
+    <DEFECTCODE>6386</DEFECTCODE>
+    <DESCRIPTION>Buffer overrun while writing to 'sampleData':  the writable size is 'keyFile.public: int __cdecl RayKeyFile::parameters(void)()*8' bytes, but '16' bytes might be written.</DESCRIPTION>
+    <FUNCTION>RayKeyData::set</FUNCTION>
+    <DECORATED>?set@RayKeyData@@QEAAHAEAVRayKeyFile@@H@Z</DECORATED>
+    <FUNCLINE>209</FUNCLINE>
+    <PROBABILITY>1</PROBABILITY>
+    <RANK>4</RANK>
+    <CATEGORY>
+      <RULECATEGORY>mspft</RULECATEGORY>
+    </CATEGORY>
+    <PATH>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>210</LINE>
+        <COLUMN>7</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>211</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>212</LINE>
+        <COLUMN>11</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>213</LINE>
+        <COLUMN>4</COLUMN>
+        <KEYEVENT>
+          <ID>1</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Skip this branch, (assume '!sampleData' is false)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>214</LINE>
+        <COLUMN>5</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>6</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>2</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Enter this loop, (assume 'i&lt;pNum')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>34</COLUMN>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>17</COLUMN>
+        <KEYEVENT>
+          <ID>3</ID>
+          <KIND>declaration</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>'i' may equal 1</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>10</COLUMN>
+        <KEYEVENT>
+          <ID>4</ID>
+          <KIND>branch</KIND>
+          <IMPORTANCE>Full</IMPORTANCE>
+          <MESSAGE>Continue this loop, (assume 'i&lt;pNum')</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+      <SFA>
+        <FILEPATH>c:\users\matt\google drive\career\school\computer graphics\assignments\2\ray\</FILEPATH>
+        <FILENAME>raykey.cpp</FILENAME>
+        <LINE>215</LINE>
+        <COLUMN>34</COLUMN>
+        <KEYEVENT>
+          <ID>5</ID>
+          <KIND>usage</KIND>
+          <IMPORTANCE>Essential</IMPORTANCE>
+          <MESSAGE>Invalid write to 'sampleData[1]', (writable range is 0 to 0)</MESSAGE>
+        </KEYEVENT>
+      </SFA>
+    </PATH>
+  </DEFECT>
+</DEFECTS>

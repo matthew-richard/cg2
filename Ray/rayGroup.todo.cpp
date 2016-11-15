@@ -50,11 +50,27 @@ int StaticRayGroup::set(void){
 //////////////////
 
 int RayGroup::drawOpenGL(int materialIndex){
+	// column-major order
+	Matrix4D& mat = this->getMatrix();
+	GLdouble m[16] = {mat(0,0), mat(0,1), mat(0,2), mat(0,3),
+					  mat(1,0), mat(1,1), mat(1,2), mat(1,3),
+				      mat(2,0), mat(2,1), mat(2,2), mat(2,3),
+					  mat(3,0), mat(3,1), mat(3,2), mat(3,3)};
+
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	//glLoadIdentity(); <-- causes problems for some reason?
+	glMultMatrixd(m);
+
+
 	int ret = 0;
 	for (int i = 0; i < this->shapeNum(); i++) {
 		if (shapes[i]->drawOpenGL(materialIndex) < 0)
 			ret = -1;
 	}
+
+	glMatrixMode(GL_MODELVIEW);
+	glPopMatrix();
 	return ret;
 }
 

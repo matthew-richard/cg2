@@ -156,11 +156,11 @@ void RayWindow::MotionFunction( int x, int y ){
 		scene->camera->rotateRight(center,0.01*d[1]);
 	}
 	if(mouse.scrollDown || (mouse.leftDown && mouse.ctrlDown)){
-		scene->camera->moveForward(radius/15*d[1]);
+		scene->camera->moveForward(d[1] * 0.01);//radius/15*d[1]);
 	}
 	if(mouse.leftDown && !mouse.shiftDown && !mouse.ctrlDown){
-		scene->camera->moveRight(-radius/250*d[0]);
-		scene->camera->moveUp(radius/250*d[1]);
+		scene->camera->moveRight(-d[0] * 0.01);// -radius / 250 * d[0]);
+		scene->camera->moveUp(d[1] * 0.01);// radius / 250 * d[1]);
 	}
 
 	glutPostRedisplay();
