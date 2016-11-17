@@ -43,6 +43,7 @@ void RayDirectionalLight::drawOpenGL(int index){
 	GLfloat c[] = { this->color[0], this->color[1], this->color[2], 1 };
 	GLfloat d[] = { this->direction[0], this->direction[1], -this->direction[2] };
 	GLfloat zero[] = { 0, 0, 0, 1 };
+	GLfloat ones[] = { 1, 1, 1, 1 };
 
 	// 0 at the end indicates that this is a directional light.
 	GLfloat p[] = { -d[0], -d[1], -d[2], 0 };
@@ -51,9 +52,9 @@ void RayDirectionalLight::drawOpenGL(int index){
 	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
 
 	// Ambient light is contributed by materials, not individual lights
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, zero);
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ones);// zero);
 	
-	glLightfv(GL_LIGHT0+index, GL_AMBIENT, zero);
+	glLightfv(GL_LIGHT0 + index, GL_AMBIENT, ones);// zero);
 	glLightfv(GL_LIGHT0+index, GL_SPECULAR, c);
 	glLightfv(GL_LIGHT0+index, GL_DIFFUSE, c);
 

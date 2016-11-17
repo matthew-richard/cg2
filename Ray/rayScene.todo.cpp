@@ -147,7 +147,33 @@ void RayMaterial::drawOpenGL(void){
 
 	glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, this->specularFallOff);
 
-	// TODO: textures?
+	if (this->tex != NULL) {
+		glEnable(GL_TEXTURE_2D);
+		glBindTexture(GL_TEXTURE_2D, this->tex->openGLHandle);
+	}
+
 }
 void RayTexture::setUpOpenGL(void){
+
+	glEnable(GL_TEXTURE_2D);
+	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+	glGenTextures(1, &this->openGLHandle);
+	glBindTexture(GL_TEXTURE_2D, this->openGLHandle);
+
+	int w = img->width();
+	int h = img->height();
+	GLubyte* rawImage = new GLubyte[w * h * 4];
+	for (int i = 0; i < img->width(); i++)
+	for (int j = 0; j < img->height(); j++) {
+		Pixel32& p = img->pixel(i, j);
+		GLubyte* b = &(rawImage[(i * w + j) * 4 + 0]);
+
+		b[0] = p.r;
+		b[1] = p.g;
+		b[2] = p.b;
+		b[3] = p.a;
+	}
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h,
+		0, GL_RGBA, GL_UNSIGNED_BYTE, rawImage);
+	delete[] rawImage;
 }
