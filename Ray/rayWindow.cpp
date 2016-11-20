@@ -1,7 +1,12 @@
 #include <stdlib.h>
 #include <string.h>
+#include <cstring>
+#include <iostream>
 #include <Util/time.h>
 #include "rayWindow.h"
+
+using std::cout;
+using std::endl;
 
 const char RayWindow::KEY_ESCAPE='\033';
 RayScene* RayWindow::scene=NULL;
@@ -146,6 +151,24 @@ void RayWindow::VisibilityFunction(int state){
 /** This function is called when the state of a mouse button is changed */
 void RayWindow::MouseFunction( int button, int state, int x, int y ){
 	mouse.update(button,state,x,y);
+
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+		cout << "Left click event." << endl;
+		// check if ray intersects with clickable switch
+		int w = glutGet(GLUT_WINDOW_WIDTH);
+		int h = glutGet(GLUT_WINDOW_WIDTH);
+		Ray3D ray = RayScene::GetRay(RayWindow::scene->camera, x, h - (y + 1), w, h);
+
+		RayIntersectionInfo iInfo;
+		if (RayWindow::scene->group->intersect(ray, iInfo) >= 0) {
+			cout << "Click pointed at scene geometry." << endl;
+			if (strstr(iInfo.material->foo, "clickable") != NULL) {
+				cout << "Switch was clicked!." << endl;
+				RayWindow::scene->lights[0]->color = Point3D(0, 0, 0);
+			}
+		}
+
+	}
 }
 /** This function is called when one of the mouse buttons is depressed and the mouse is moved. */
 void RayWindow::MotionFunction( int x, int y ){
