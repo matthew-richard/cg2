@@ -88,6 +88,8 @@ public:
 	static void MainMenu(int entry);
 	/**  This function draws the OpenGL window. */
 	static void DisplayFunction(void);
+	/**  This function draws the ray-tracing results in the OpenGL window. */
+	static void RayTraceFunction(void);
 	/** This function is called when the window is resized. */
 	static void ReshapeFunction(int width,int height);
 

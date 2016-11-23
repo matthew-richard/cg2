@@ -57,7 +57,7 @@ Point3D RayScene::GetColor(Ray3D ray, int rDepth, Point3D cLimit) {
 		for (int i = 0; i < 3; i++)
 			if (ray.position[i] != camera->position[i])
 				{ fromCamera = 0; break; }
-		return fromCamera ? this->background : Point3D(0,0,0);
+		return fromCamera ? this->background : Point3D(0, 0, 0);
 	}
 
 	// Rays "pass through" the backsides of shapes 
@@ -157,6 +157,8 @@ void RayTexture::setUpOpenGL(void){
 
 	glEnable(GL_TEXTURE_2D);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glGenTextures(1, &this->openGLHandle);
 	glBindTexture(GL_TEXTURE_2D, this->openGLHandle);
 
@@ -166,7 +168,7 @@ void RayTexture::setUpOpenGL(void){
 	for (int i = 0; i < img->width(); i++)
 	for (int j = 0; j < img->height(); j++) {
 		Pixel32& p = img->pixel(i, j);
-		GLubyte* b = &(rawImage[(i * w + j) * 4 + 0]);
+		GLubyte* b = &(rawImage[(j * w + i) * 4]);
 
 		b[0] = p.r;
 		b[1] = p.g;

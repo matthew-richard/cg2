@@ -59,13 +59,12 @@ int RayGroup::drawOpenGL(int materialIndex){
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
-	//glLoadIdentity(); <-- causes problems for some reason?
 	glMultMatrixd(m);
-
 
 	int ret = 0;
 	for (int i = 0; i < this->shapeNum(); i++) {
-		if (shapes[i]->drawOpenGL(materialIndex) < 0)
+		materialIndex = shapes[i]->drawOpenGL(materialIndex);
+		if (materialIndex < 0)
 			ret = -1;
 	}
 

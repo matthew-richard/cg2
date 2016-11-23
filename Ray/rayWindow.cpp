@@ -152,19 +152,26 @@ void RayWindow::VisibilityFunction(int state){
 void RayWindow::MouseFunction( int button, int state, int x, int y ){
 	mouse.update(button,state,x,y);
 
+	if (state == GLUT_DOWN) {
+		printf("No longer ray tracing.\n");
+		glutDisplayFunc(DisplayFunction);
+	}
+
 	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
-		cout << "Left click event." << endl;
 		// check if ray intersects with clickable switch
 		int w = glutGet(GLUT_WINDOW_WIDTH);
-		int h = glutGet(GLUT_WINDOW_WIDTH);
-		Ray3D ray = RayScene::GetRay(RayWindow::scene->camera, x, h - (y + 1), w, h);
+		int h = glutGet(GLUT_WINDOW_HEIGHT);
+		Ray3D ray = RayScene::GetRay(RayWindow::scene->camera, x, h - y, w, h);
+		printf("Left click event (%d, %d).\n", x, y);
 
 		RayIntersectionInfo iInfo;
 		if (RayWindow::scene->group->intersect(ray, iInfo) >= 0) {
 			cout << "Click pointed at scene geometry." << endl;
 			if (strstr(iInfo.material->foo, "clickable") != NULL) {
 				cout << "Switch was clicked!." << endl;
-				RayWindow::scene->lights[0]->color = Point3D(0, 0, 0);
+
+				// Randomize color of first light
+				RayWindow::scene->lights[0]->color = Point3D(rand() / (float) RAND_MAX, rand() / (float) RAND_MAX, rand() / (float) RAND_MAX);
 			}
 		}
 
@@ -173,6 +180,7 @@ void RayWindow::MouseFunction( int button, int state, int x, int y ){
 /** This function is called when one of the mouse buttons is depressed and the mouse is moved. */
 void RayWindow::MotionFunction( int x, int y ){
 	Point2D d=mouse.move(x,y);
+
 
 	if(mouse.middleDown || (mouse.leftDown && mouse.shiftDown)){
 		scene->camera->rotateUp(center,0.01*d[0]);
@@ -299,7 +307,21 @@ void RayWindow::CurveFitMenu(int entry){
 }
 /** This function is called when the user selects one of the main menu options in the drop-down menu. */
 void RayWindow::MainMenu(int entry){
-	if(!entry){exit( 0 );}
+switch (entry) {
+case 0:
+	exit(0);
+	break;
+case -1:
+	cout << "Ray tracing." << endl;
+	glClear(GL_COLOR_BUFFER_BIT | GL_ACCUM_BUFFER_BIT);
+	glutDisplayFunc(RayTraceFunction);
+	glutPostRedisplay();
+	break;
+default:
+	cout << "Unrecognized menu option. Quitting." << endl;
+	exit(1);
+	break;
+}
 }
 
 /////////////////////////
@@ -319,7 +341,7 @@ void RayWindow::DisplayFunction(void){
 	// size of the model)
 	glMatrixMode( GL_PROJECTION );
 	glLoadIdentity();
-	gluPerspective(scene->camera->heightAngle*180.0/PI,scene->camera->aspectRatio,.1*d,2*d);
+	gluPerspective(scene->camera->heightAngle*180.0/PI,scene->camera->aspectRatio,0.1,10000*d);
 
 	// Draw the RayScene
 	GLint drawMode[2];
@@ -355,6 +377,78 @@ void RayWindow::DisplayFunction(void){
 	// Write out the mouse position
 	sprintf(temp,"(%3d , %3d)",mouse.endX,mouse.endY);
 	WriteRightString(1,2,temp);
+
+	// Swap the back and front buffers
+	glutSwapBuffers();
+}
+
+/**  This function draws the OpenGL window. */
+void RayWindow::RayTraceFunction(void) {
+	Image32 img;
+	GLuint tex;
+	
+	// Perform ray tracing
+	scene->RayTrace(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT), 5, 0.0001, img);
+	img.WriteImage("img.bmp");
+
+	// Provide image as texture to OpenGL
+	int w = img.width();
+	int h = img.height();
+	GLubyte* rawImage = new GLubyte[w * h * 4];
+	for (int i = 0; i < w; i++)
+	for (int j = 0; j < h; j++) {
+		Pixel32& p = img.pixel(i, j);
+		GLubyte* b = &(rawImage[(j * w + i) * 4]);
+
+		b[0] = p.r;
+		b[1] = p.g;
+		b[2] = p.b;
+		b[3] = p.a;
+	}
+	glEnable(GL_LIGHTING);
+	glEnable(GL_TEXTURE_2D);
+	glGenTextures(1, &tex);
+	glBindTexture(GL_TEXTURE_2D, tex);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexEnvi(GL_TEXTURE_2D, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, rawImage);
+	delete[] rawImage;
+
+	// Clear the color and depth buffers
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	// Reset material ambience
+	GLfloat ones[] = { 1, 1, 1, 1 };
+	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, ones);
+
+
+	// As described on SO: http://gamedev.stackexchange.com/questions/61080/how-do-i-draw-a-full-resolution-texture-to-a-window-of-the-same-resolution
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	glOrtho(0, w, 0, h, -1, 1);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	
+	glBegin(GL_QUADS);
+		glNormal3f(0, 0, -1.0f);
+
+		glTexCoord2f(0, 1);
+		glVertex3f(0, 0, 0); // Upper left
+
+		glTexCoord2f(1, 1);
+		glVertex3f(w, 0, 0); // Upper right
+
+		glTexCoord2f(1, 0);
+		glVertex3f(w, h, 0); // Lower right
+
+		glTexCoord2f(0, 0);
+		glVertex3f(0, h, 0); // Lower left
+	glEnd();
+	glDeleteTextures(1, &tex);
+
+	WriteRightString(1, 2, "Click to stop ray-tracing.");
 
 	// Swap the back and front buffers
 	glutSwapBuffers();
@@ -430,6 +524,7 @@ void RayWindow::RayView(RayScene* s,int width,int height,int cplx){
 	glutAddSubMenu(" Cull mode ", cullMenu);
 	glutAddSubMenu(" Animation Fitting ",curveFitMenu);
 	glutAddMenuEntry(" Quit ",0);
+	glutAddMenuEntry(" RayTrace", -1);
 
 	// Attach the drop-down menu to the right button
 	glutAttachMenu( GLUT_RIGHT_BUTTON );

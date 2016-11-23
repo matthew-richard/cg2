@@ -70,12 +70,12 @@ BoundingBox3D RayTriangle::setBoundingBox(void){
 // OpenGL stuff //
 //////////////////
 int RayTriangle::drawOpenGL(int materialIndex){
-	if (this->material->index != materialIndex)
-		this->material->drawOpenGL();
+	this->material->drawOpenGL();
 
-	glShadeModel(GL_FLAT);
-	
+	Point3D& n = this->plane.normal;
+
 	glBegin(GL_TRIANGLES);
+		glNormal3f(n[0], n[1], n[2]);
 		glTexCoord2f(v[0]->texCoordinate[0], v[0]->texCoordinate[1]);
 		glVertex3f(v[0]->position[0], v[0]->position[1], v[0]->position[2]);
 		glTexCoord2f(v[1]->texCoordinate[0], v[1]->texCoordinate[1]);

@@ -20,8 +20,7 @@ BoundingBox3D RayCylinder::setBoundingBox(void){
 // OpenGL stuff //
 //////////////////
 int RayCylinder::drawOpenGL(int materialIndex){
-	if (this->material->index != materialIndex)
-		this->material->drawOpenGL();
+	this->material->drawOpenGL();
 
 	GLUquadric* s = gluNewQuadric();
 	gluQuadricDrawStyle(s, GL_POLYGON);

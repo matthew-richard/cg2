@@ -52,12 +52,12 @@ void RayDirectionalLight::drawOpenGL(int index){
 	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
 
 	// Ambient light is contributed by materials, not individual lights
-	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ones);// zero);
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, zero);
 	
-	glLightfv(GL_LIGHT0 + index, GL_AMBIENT, ones);// zero);
+	glLightfv(GL_LIGHT0+index, GL_AMBIENT, ones);
 	glLightfv(GL_LIGHT0+index, GL_SPECULAR, c);
 	glLightfv(GL_LIGHT0+index, GL_DIFFUSE, c);
-
+	
 	glLightfv(GL_LIGHT0+index, GL_POSITION, p);
 
 	glLighti(GL_LIGHT0 + index, GL_SPOT_EXPONENT, 0);

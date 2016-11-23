@@ -18,46 +18,63 @@ BoundingBox3D RayBox::setBoundingBox(void){
 // OpenGL stuff //
 //////////////////
 int RayBox::drawOpenGL(int materialIndex){
-	if (this->material->index != materialIndex)
-		this->material->drawOpenGL();
+	this->material->drawOpenGL();
 
 	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
 	glTranslatef(this->center[0], this->center[1], this->center[2]);
 	glScalef(this->length[0], this->length[1], this->length[2]);
 
-	glShadeModel(GL_FLAT);
-	glBegin(GL_TRIANGLE_STRIP);
-		// major strip
-		glVertex3f(0.5, 0.5, 0.5);
-		glVertex3f(-0.5, 0.5, 0.5);
-		glVertex3f(0.5, -0.5, 0.5);
-		glVertex3f(-0.5, -0.5, 0.5);
-		glVertex3f(0.5, -0.5, -0.5);
-		glVertex3f(-0.5, -0.5, -0.5);
-		glVertex3f(0.5, 0.5, -0.5);
-		glVertex3f(-0.5, 0.5, -0.5);
-		glVertex3f(0.5, 0.5, 0.5);
-		glVertex3f(-0.5, 0.5, 0.5);
-	glEnd();
+	glShadeModel(GL_SMOOTH);
+	glEnable(GL_NORMALIZE);
+	glDisable(GL_RESCALE_NORMAL);
+	glBegin(GL_QUADS);
+		// top
+		glNormal3f(0.0f, 1.0f, 0.0f);
+		glVertex3f(-0.5f, 0.5f, 0.5f);
+		glVertex3f(0.5f, 0.5f, 0.5f);
+		glVertex3f(0.5f, 0.5f, -0.5f);
+		glVertex3f(-0.5f, 0.5f, -0.5f);
 
-	glBegin(GL_TRIANGLE_STRIP);
-		// left side
-		glVertex3f(-0.5, 0.5, 0.5);
-		glVertex3f(-0.5, 0.5, -0.5);
-		glVertex3f(-0.5, -0.5, 0.5);
-		glVertex3f(-0.5, -0.5, -0.5);
-	glEnd();
+		// front
+		glNormal3f(0.0f, 0.0f, 1.0f);
+		glVertex3f(-0.5f, -0.5f, 0.5f);
+		glVertex3f(0.5f, -0.5f, 0.5f);
+		glVertex3f(0.5f, 0.5f, 0.5f);
+		glVertex3f(-0.5f, 0.5f, 0.5f);
 
-	glBegin(GL_TRIANGLE_STRIP);
-		// right side
-		glVertex3f(0.5, 0.5, -0.5);
-		glVertex3f(0.5, 0.5, 0.5);
-		glVertex3f(0.5, -0.5, -0.5);
-		glVertex3f(0.5, -0.5, 0.5);
-	glEnd();
+		// right
+		glNormal3f(1.0f, 0.0f, 0.0f);
+		glVertex3f(0.5f, -0.5f, 0.5f);
+		glVertex3f(0.5f, -0.5f, -0.5f);
+		glVertex3f(0.5f, 0.5f, -0.5f);
+		glVertex3f(0.5f, 0.5f, 0.5f);
 
-	glScalef(1 / this->length[0], 1 / this->length[1], 1 / this->length[2]);
-	glTranslatef(-this->center[0], -this->center[1], -this->center[2]);
+		// left
+		glNormal3f(-1.0f, 0.0f, 0.0f);
+		glVertex3f(-0.5f, -0.5f, 0.5f);
+		glVertex3f(-0.5f, 0.5f, 0.5f);
+		glVertex3f(-0.5f, 0.5f, -0.5f);
+		glVertex3f(-0.5f, -0.5f, -0.5f);
+
+		// bottom
+		glNormal3f(0.0f, -1.0f, 0.0f);
+		glVertex3f(-0.5f, -0.5f, -0.5f);
+		glVertex3f(0.5f, -0.5f, -0.5f);
+		glVertex3f(0.5f, -0.5f, 0.5f);
+		glVertex3f(-0.5f, -0.5f, 0.5f);
+
+		// back
+		glNormal3f(0.0f, 0.0f, -1.0f);
+		glVertex3f(0.5f, 0.5f, -0.5f);
+		glVertex3f(0.5f, -0.5f, -0.5f);
+		glVertex3f(-0.5f, -0.5f, -0.5f);
+		glVertex3f(-0.5f, 0.5f, -0.5f);
+
+	glEnd();
+	
+
+	glPopMatrix();
 
 	return this->material->index;
 }
