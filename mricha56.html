@@ -1,8 +1,9 @@
 
-<!-- saved from url=(0098)file:///C:/Users/Matt/Google%20Drive/Career/School/Computer%20Graphics/Assignments/2/mricha56.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
 
-<h1>Computer Graphics Assigment 3</h1>
+<style>img { display: block; width: 100%; }</style>
+	
+<h1>Computer Graphics Assignment 3</h1>
 <ul>
 <li>Matt Richard</li>
 <li>mricha56</li>
@@ -10,13 +11,48 @@
 <li>Used 0 late days</li>
 </ul>
 
-<h2>Implemented:</h2>
+<h2>Implementation</h2>
+  <p>Implemented everything <b>except</b>:</p>
+  <ul>
+  <li>Anti-aliasing</li>
+  <li>In .ray file (Again, I did <em>not</em> implement these):<ul>
+    <li>Luxo Jr. lamp</li>
+    <li>Mirror</li>
+    <li>Shadows</li>
+    </ul></li>
+  <li>Testing for identical material indices to reduce calls to glMaterial*</li>
+  <li>Custom GLSL shaders</li>
+  </ul>
+  
+<p>The object that responds to user mouse clicks is the green sphere resting on the table. Clicking on it randomizes the color of the first light in the scene. The code that does this is in RayTraceFunction in rayWindow.cpp.</p>
+
+<p>To ray-trace the scene, right click and select Ray Trace. Since I never implemented cone, cylinder, or box intersections for Assignment 2, only spheres and triangles will be visible. Click once to stop displaying the ray-traced image.</p>
+  
+  <p>The top-level of my scene is defined in <a href="mricha56_HTML/scene.ray" target="_blank">scene.ray</a>. You can run my program with the following command: </p><pre>./Assignment3 --in scene.ray --width 800 --height 450 --cplx 100</pre><p></p>
+
+  <h2>Bugs</h2>
+
+  The code still contains a few bugs. I tried my best to resolve these but ended up running out of time.
+
+  <h3>Rotated Objects Appear "Inside Out"</h3>
+
+  I suspect this is due to object normals not rotating along with the object during ModelView transformation. <br/>
+
+  See the below image. This only seems to result when an object's transformation specifies a rotation.
+
+  <img src="mricha56_HTML/chair.jpg" alt="Chair Bug">
 
 
+  <h3>Third Triangle in Scene Does Not Appear Textured</h3>
+
+  As far as I can tell, <a href="mricha56_HTML/triangles.ray" target="_blank">triangles.ray</a> is correct syntax-wise and <a href="mricha56_HTML/tex2.bmp" target="_blank">tex2.bmp</a> is a valid texture. While tex0.bmp and tex1.bmp display correctly, tex2.bmp does not display correctly on the third triangle in my scene.
+  
+  <img src="mricha56_HTML/triangles.jpg" alt="Texture Bug">
 
 
+  <h3>Specular Flickering</h3>
 
-
+  Rotating the scene seems to result in the table and other box objects flickering white on occasion.
 
 
 </body></html>

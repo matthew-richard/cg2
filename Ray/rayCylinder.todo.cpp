@@ -28,10 +28,11 @@ int RayCylinder::drawOpenGL(int materialIndex){
 	gluQuadricOrientation(s, GLU_OUTSIDE);
 	glShadeModel(GL_SMOOTH);
 	gluCylinder(s, this->radius, this->radius, this->height, this->openGLComplexity, this->openGLComplexity);
+	gluQuadricOrientation(s, GLU_INSIDE);
 	glShadeModel(GL_FLAT);
 	gluDisk(s, 0, this->radius, this->openGLComplexity, this->openGLComplexity);
 	glTranslatef(0, 0, this->height);
-	gluQuadricOrientation(s, GLU_INSIDE);
+	gluQuadricOrientation(s, GLU_OUTSIDE);
 	gluDisk(s, 0, this->radius, this->openGLComplexity, this->openGLComplexity);
 	glTranslatef(0, 0, -this->height);
 	gluDeleteQuadric(s);

@@ -59,6 +59,7 @@ void RaySpotLight::drawOpenGL(int index){
 	GLfloat p[] = { this->location[0], this->location[1], this->location[2], 1 };
 	GLfloat d[] = { this->direction[0], this->direction[1], this->direction[2] };
 	GLfloat zero[] = { 0, 0, 0, 1 };
+	GLfloat ones[] = { 1, 1, 1, 1 };
 
 	// Light is not infinitely far away (only affects specular)
 	glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
@@ -66,7 +67,7 @@ void RaySpotLight::drawOpenGL(int index){
 	// Ambient light is contributed by materials, not individual lights
 	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, zero);
 
-	glLightfv(GL_LIGHT0 + index, GL_AMBIENT, zero);
+	glLightfv(GL_LIGHT0 + index, GL_AMBIENT, ones);
 	glLightfv(GL_LIGHT0 + index, GL_SPECULAR, c);
 	glLightfv(GL_LIGHT0 + index, GL_DIFFUSE, c);
 

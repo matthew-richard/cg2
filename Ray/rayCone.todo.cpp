@@ -22,6 +22,11 @@ BoundingBox3D RayCone::setBoundingBox(void){
 int RayCone::drawOpenGL(int materialIndex){
 	this->material->drawOpenGL();
 
+	// Draw cone pointing up
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glRotatef(-90, 1, 0, 0);
+
 	GLUquadric* s = gluNewQuadric();
 	gluQuadricDrawStyle(s, GL_POLYGON);
 	gluQuadricNormals(s, GLU_SMOOTH);
@@ -29,8 +34,10 @@ int RayCone::drawOpenGL(int materialIndex){
 	glShadeModel(GL_SMOOTH);
 	gluCylinder(s, this->radius, 0, this->height, this->openGLComplexity, this->openGLComplexity);
 	glShadeModel(GL_FLAT);
+	gluQuadricOrientation(s, GLU_INSIDE);
 	gluDisk(s, 0, this->radius, this->openGLComplexity, this->openGLComplexity);
 	gluDeleteQuadric(s);
 
+	glPopMatrix();
 	return this->material->index;
 }

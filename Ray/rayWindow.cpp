@@ -389,7 +389,7 @@ void RayWindow::RayTraceFunction(void) {
 	
 	// Perform ray tracing
 	scene->RayTrace(glutGet(GLUT_WINDOW_WIDTH), glutGet(GLUT_WINDOW_HEIGHT), 5, 0.0001, img);
-	img.WriteImage("img.bmp");
+	//img.WriteImage("img.bmp");
 
 	// Provide image as texture to OpenGL
 	int w = img.width();

@@ -138,7 +138,8 @@ void RayMaterial::drawOpenGL(void){
 	GLfloat a[] = { this->ambient[0], this->ambient[1], this->ambient[2], alpha };
 	GLfloat one[] = { 1, 1, 1, 1 };
 
-	// TODO: transparency?
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, d);
 	glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, s);
@@ -150,6 +151,9 @@ void RayMaterial::drawOpenGL(void){
 	if (this->tex != NULL) {
 		glEnable(GL_TEXTURE_2D);
 		glBindTexture(GL_TEXTURE_2D, this->tex->openGLHandle);
+	}
+	else {
+		glDisable(GL_TEXTURE_2D);
 	}
 
 }
