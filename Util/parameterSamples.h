@@ -15,6 +15,7 @@ public:
 	  * The value type specifies how the interpolation/approximation is to be done.*/
 	virtual void setCurrentValue(double t,int type=LINEAR)=0;
 };
+
 /** This template class stores an array of samples of a parameter. It is used for computing
   * the  in-between values using linear interpolation or spline methods.
   * In order to be used, the template class needs to support addition and right

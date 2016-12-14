@@ -5,7 +5,7 @@ template <class Vector>
 void ParameterSamples<Vector>::setCurrentValue(double t,int type){
 	switch (type){
 		case LINEAR:
-			currentValue=samples[0];
+			currentValue=samples[0] * (1 - t) + samples[1] * t;
 			break;
 		case CATMULL_ROM:
 			currentValue=samples[0];
