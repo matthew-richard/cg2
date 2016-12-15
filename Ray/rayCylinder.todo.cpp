@@ -22,6 +22,11 @@ BoundingBox3D RayCylinder::setBoundingBox(void){
 int RayCylinder::drawOpenGL(int materialIndex){
 	this->material->drawOpenGL();
 
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glTranslatef(0, 0, -this->height/2);
+	glRotatef(90, 1, 0, 0);
+	
 	GLUquadric* s = gluNewQuadric();
 	gluQuadricDrawStyle(s, GL_POLYGON);
 	gluQuadricNormals(s, GLU_SMOOTH);
@@ -34,8 +39,9 @@ int RayCylinder::drawOpenGL(int materialIndex){
 	glTranslatef(0, 0, this->height);
 	gluQuadricOrientation(s, GLU_OUTSIDE);
 	gluDisk(s, 0, this->radius, this->openGLComplexity, this->openGLComplexity);
-	glTranslatef(0, 0, -this->height);
+
 	gluDeleteQuadric(s);
+	glPopMatrix();
 
 	return this->material->index;
 }

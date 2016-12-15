@@ -34,12 +34,57 @@ Matrix3D::Matrix3D(const Point3D& e){
 
 Matrix3D::Matrix3D(const Quaternion& q){
 	(*this)=Matrix3D();
+	Quaternion r = q; // get rid of const
+	m[0][0] = 1 - 2 * r.imag[1] * r.imag[1] - 2 * r.imag[2] * r.imag[2];
+	m[0][1] = 2 * r.imag[0] * r.imag[1] + 2 * r.real * r.imag[2];
+	m[0][2] = 2 * r.imag[0] * r.imag[2] - 2 * r.real * r.imag[1];
+	m[1][0] = 2 * r.imag[0] * r.imag[1] - 2 * r.real * r.imag[2];
+	m[1][1] = 1 - 2 * r.imag[0] * r.imag[0] - 2 * r.imag[2] * r.imag[2];
+	m[1][2] = 2 * r.imag[1] * r.imag[2] + 2 * r.real * r.imag[0];
+	m[2][0] = 2 * r.imag[0] * r.imag[2] + 2 * r.real * r.imag[1];
+	m[2][1] = 2 * r.imag[1] * r.imag[2] - 2 * r.real * r.imag[0];
+	m[2][2] = 1 - 2 * r.imag[0] * r.imag[0] - 2 * r.imag[1] * r.imag[1];
 }
 Matrix3D Matrix3D::closestRotation(void) const {
-	return (*this);
+	Matrix3D r1, r2, diag;
+	this->SVD(r1, diag, r2);
+	for (int i = 0; i < 3; i++) {
+		if (diag(i,i))
+			diag(i,i) = diag(i,i) > 0 ? 1 : -1;
+	}
+	return r1 * diag * r2;
 }
+
+/* Helper functions */
+static Matrix3D pow(const Matrix3D& m, int exponent);
+static unsigned long factorial(unsigned long n);
+
 /* While these Exp and Log implementations are the direct implementations of the Taylor series, the Log
  * function tends to run into convergence issues so we use the other ones:*/
 Matrix3D Matrix3D::Exp(const Matrix3D& m,int iter){
-	return m;
+	Matrix3D mat = Matrix3D::IdentityMatrix();
+
+	for (int i = 1; i <= iter; i++) {
+		mat += pow(m, i) / factorial(i);
+	}
+	
+	return mat;
+}
+
+static Matrix3D pow(const Matrix3D& m, int exponent) {
+	Matrix3D ret;
+	while ( exponent > 0 ) {
+		ret *= m;
+		exponent--;
+	}
+	return ret;
+}
+
+static unsigned long factorial(unsigned long n) {
+	unsigned long ret = 1;
+	while (n > 0) {
+		ret *= n;
+		n--;
+	}
+	return ret;
 }

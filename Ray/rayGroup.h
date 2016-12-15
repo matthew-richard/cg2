@@ -5,7 +5,6 @@
 #include "rayScene.h"
 
 
-
 /** This class can be used for sorting shapes based on the intersections of their bounding volumes with a given ray.*/
 class RayShapeHit{
 public:

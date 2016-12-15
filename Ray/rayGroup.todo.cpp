@@ -68,8 +68,6 @@ int RayGroup::drawOpenGL(int materialIndex){
 			ret = -1;
 	}
 
-    
-
 	glMatrixMode(GL_MODELVIEW);
 	glPopMatrix();
 	return ret;
@@ -87,7 +85,7 @@ Matrix4D ParametrizedEulerAnglesAndTranslation::getMatrix(void){
 	return mat;
 }
 Matrix4D ParametrizedClosestRotationAndTranslation::getMatrix(void){
-	Matrix4D mat = Matrix4D(this->value->rotation);
+	Matrix4D mat = Matrix4D(this->value->rotation.closestRotation());
 	mat(3,0) = this->value->translate[0];
 	mat(3,1) = this->value->translate[1];
 	mat(3,2) = this->value->translate[2];
@@ -95,8 +93,18 @@ Matrix4D ParametrizedClosestRotationAndTranslation::getMatrix(void){
 	return mat;
 }
 Matrix4D ParametrizedRotationLogarithmAndTranslation::getMatrix(void){
-	return Matrix4D::IdentityMatrix();
+	Matrix4D mat = Matrix4D(Matrix3D::Exp(this->value->skewSymmetric));
+	mat(3,0) = this->value->translate[0];
+	mat(3,1) = this->value->translate[1];
+	mat(3,2) = this->value->translate[2];
+
+	return mat;
 }
 Matrix4D ParametrizedQuaternionAndTranslation::getMatrix(void){
-	return Matrix4D::IdentityMatrix();
+	Matrix4D mat = Matrix4D(Matrix3D(this->value->quaternion));
+	mat(3,0) = this->value->translate[0];
+	mat(3,1) = this->value->translate[1];
+	mat(3,2) = this->value->translate[2];
+
+	return mat;
 }
