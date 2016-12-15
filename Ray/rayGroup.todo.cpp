@@ -93,7 +93,7 @@ Matrix4D ParametrizedClosestRotationAndTranslation::getMatrix(void){
 	return mat;
 }
 Matrix4D ParametrizedRotationLogarithmAndTranslation::getMatrix(void){
-	Matrix4D mat = Matrix4D(Matrix3D::Exp(this->value->skewSymmetric));
+	Matrix4D mat = Matrix4D(Matrix3D::Exp(this->value->skewSymmetric, 20));
 	mat(3,0) = this->value->translate[0];
 	mat(3,1) = this->value->translate[1];
 	mat(3,2) = this->value->translate[2];
@@ -101,7 +101,7 @@ Matrix4D ParametrizedRotationLogarithmAndTranslation::getMatrix(void){
 	return mat;
 }
 Matrix4D ParametrizedQuaternionAndTranslation::getMatrix(void){
-	Matrix4D mat = Matrix4D(Matrix3D(this->value->quaternion));
+	Matrix4D mat = Matrix4D(Matrix3D(this->value->quaternion.unit()));
 	mat(3,0) = this->value->translate[0];
 	mat(3,1) = this->value->translate[1];
 	mat(3,2) = this->value->translate[2];

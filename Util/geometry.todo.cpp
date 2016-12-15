@@ -14,13 +14,30 @@ double BoundingBox3D::intersect(const Ray3D& ray) const {
 	return -1;
 }
 
+static void swapDoubles(double& a, double& b) {
+	double temp = a;
+	a = b;
+	b = temp;
+}
+
 /////////////////////
 // Animation stuff //
 /////////////////////
 Matrix3D::Matrix3D(const Point3D& e){
 	(*this)=Matrix3D();
 	Point3D pt = e; // indexing a point isn't const for some reason
-	
+
+	m[0][0] = cos(pt[1]) * cos(pt[2]);
+	m[0][1] = cos(pt[0]) * sin(pt[2]) + cos(pt[2]) * sin(pt[0]) * sin(pt[1]);
+	m[0][2] = sin(pt[0]) * sin(pt[2]) - cos(pt[0]) * cos(pt[2]) * sin(pt[1]);
+	m[1][0] = -cos(pt[1]) * sin(pt[2]);
+	m[1][1] = cos(pt[0]) * cos(pt[2]) - sin(pt[0]) * sin(pt[1]) * sin(pt[2]);
+	m[1][2] = cos(pt[2]) * sin(pt[0]) + cos(pt[0]) * sin(pt[1]) * sin(pt[2]);
+	m[2][0] = sin(pt[1]);
+	m[2][1] = -cos(pt[1]) * sin(pt[0]);
+	m[2][2] = cos(pt[0]) * cos(pt[1]);
+
+	/*
 	m[0][0] = cos(pt[2]) * cos(pt[0]) - cos(pt[1]) * sin(pt[0]) * sin(pt[2]);
 	m[1][0] = cos(pt[2]) * sin(pt[0]) + cos(pt[1]) * cos(pt[0]) * sin(pt[2]);
 	m[2][0] = sin(pt[2]) * sin(pt[1]);
@@ -30,6 +47,7 @@ Matrix3D::Matrix3D(const Point3D& e){
 	m[0][2] = sin(pt[1]) * sin(pt[0]);
 	m[1][2] = -sin(pt[1]) * cos(pt[0]);
 	m[2][2] = cos(pt[1]);
+	*/
 }
 
 Matrix3D::Matrix3D(const Quaternion& q){
@@ -73,18 +91,12 @@ Matrix3D Matrix3D::Exp(const Matrix3D& m,int iter){
 
 static Matrix3D pow(const Matrix3D& m, int exponent) {
 	Matrix3D ret = Matrix3D::IdentityMatrix();
-	while ( exponent > 0 ) {
-		ret *= m;
-		exponent--;
-	}
+	for (; exponent > 0; exponent--) ret *= m;
 	return ret;
 }
 
 static unsigned long factorial(unsigned long n) {
 	unsigned long ret = 1;
-	while (n > 0) {
-		ret *= n;
-		n--;
-	}
+	for (; n > 0; n--) ret *= n;
 	return ret;
 }
