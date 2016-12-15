@@ -72,7 +72,7 @@ Matrix3D Matrix3D::Exp(const Matrix3D& m,int iter){
 }
 
 static Matrix3D pow(const Matrix3D& m, int exponent) {
-	Matrix3D ret;
+	Matrix3D ret = Matrix3D::IdentityMatrix();
 	while ( exponent > 0 ) {
 		ret *= m;
 		exponent--;

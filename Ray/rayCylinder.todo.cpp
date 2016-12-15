@@ -24,8 +24,9 @@ int RayCylinder::drawOpenGL(int materialIndex){
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
-	glTranslatef(0, 0, -this->height/2);
+	glTranslatef(this->center[0], this->center[1], this->center[2]);
 	glRotatef(90, 1, 0, 0);
+	glTranslatef(0, 0, -this->height/2);
 	
 	GLUquadric* s = gluNewQuadric();
 	gluQuadricDrawStyle(s, GL_POLYGON);
