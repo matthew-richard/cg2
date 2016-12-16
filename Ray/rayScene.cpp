@@ -823,7 +823,7 @@ void RayScene::setCurrentTime(double t,int curveFit){
 		double tt = 0;
 		if (t >= keyFiles[i].start)
 		{
-			double tt = (t - keyFiles[i].start) / keyFiles[i].duration;
+			tt = (t - keyFiles[i].start ) / keyFiles[i].duration;
 			tt -= (int)tt;
 		}
 		keyData[i].setCurrentValue(tt,curveFit);

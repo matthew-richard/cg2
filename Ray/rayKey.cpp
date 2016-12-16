@@ -48,6 +48,11 @@ int RayKeyFile::read(char* fileName){
 	fp=fopen(fileName,"r");
 	if(!fp){return 0;}
 
+	if (fscanf(fp, " #START %d ", &start) != 1) {
+		fclose(fp);
+		return 0;
+	}
+
 	if(fscanf(fp," #DOFS %d ",&pNum)!=1 || pNum<=0){
 		fclose(fp);
 		return 0;
@@ -119,6 +124,7 @@ int RayKeyFile::write(char* fileName){
 	fp=fopen(fileName,"w");
 	if(!fp){return 0;}
 
+	fprintf(fp, "#START %d ", start);
 	fprintf(fp," #DOFS %d ",pNum);
 	for(i=0;i<pNum;i++){fprintf(fp,"\t%s\n",pNames[i]);}
 	fprintf(fp," #DURATION %f\n",duration);
