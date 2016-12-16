@@ -41,6 +41,20 @@ public:
 	static double startTime;
 	
 	static int curveFit;
+
+	/** For rendering videos **/
+
+	/* Frames per second */
+	const static double videoFrameRate;
+
+	/* Number of frames drawn so far */
+	static int numRenderedFrames;
+
+	/* Number of frames that need to be drawn before exiting */
+	static int totalFrames;
+
+	/* File prefix to write to */
+	static char video[1024];
 	
 	
 	
@@ -96,6 +110,6 @@ public:
 
 	/** This function instantiates the OpenGL window, reading in the RayScene from the specified file
 	  * and setting the initial OpenGL window size. The function never returns! */
-	static void RayView(RayScene* scene,int width,int height,int cplx);
+	static void RayView(RayScene* scene, int width, int height, int cplx, char* video = "", float duration = 1.0);
 };
 #endif // RAY_WINDOW_INCLUDED

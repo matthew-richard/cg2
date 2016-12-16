@@ -19,6 +19,10 @@ double RayWindow::radius;
 double RayWindow::frameRate;
 double RayWindow::frameCountStart;
 Point3D RayWindow::center;
+const double RayWindow::videoFrameRate = 5.0;
+int RayWindow::numRenderedFrames;
+int RayWindow::totalFrames;
+char RayWindow::video[1024];
 
 /** This function prints out the state of the OpenGL error. */
 int RayWindow::PrintError(const int& showNoError){
@@ -107,7 +111,7 @@ void RayWindow::WriteRightString(const int& x,const int& y,const char* str){
 int RayWindow::TakeSnapshot(Image32& img){
 	GLfloat *pixels;
 	int i,j,temp;
-	Pixel p;
+	Pixel32 p;
 	GLint vp[4];
 	glGetIntegerv(GL_VIEWPORT,vp);
 
@@ -133,11 +137,13 @@ int RayWindow::TakeSnapshot(Image32& img){
 }
 
 /** This function is called when no events need to be processed. */
-void RayWindow::IdleFunction(void){
-	// Update the parameter values
-	scene->setCurrentTime(GetTime()-startTime,curveFit);
+void RayWindow::IdleFunction(void) {
+	if (!strlen(video)) {
+		// Update the parameter values
+		scene->setCurrentTime(GetTime() - startTime, curveFit);
+	}
 	// Just draw the scene again
-	if(isVisible){glutPostRedisplay();}
+	if (strlen(video) || isVisible) { glutPostRedisplay(); }
 }
 /** This function is called when the visibility state of the window changes. */
 void RayWindow::VisibilityFunction(int state){
@@ -380,6 +386,23 @@ void RayWindow::DisplayFunction(void){
 
 	// Swap the back and front buffers
 	glutSwapBuffers();
+
+	// Save to file
+	if (strlen(video)) {
+		Image32 img;
+		char fileName[1024];
+		numRenderedFrames++;
+		scene->setCurrentTime(numRenderedFrames / videoFrameRate, curveFit);
+		sprintf(fileName, "%s_%d.bmp", video, numRenderedFrames);
+
+		TakeSnapshot(img);
+		img.WriteImage(fileName);
+
+		if (numRenderedFrames >= totalFrames) {
+			printf("All %d frames rendered. Exiting.\n", totalFrames);
+			exit(0);
+		}
+	}
 }
 
 /**  This function draws the OpenGL window. */
@@ -467,11 +490,12 @@ void RayWindow::ReshapeFunction(int width,int height)
 
 /** This function instantiates the OpenGL window, reading in the RayScene from the specified file
   * and setting the initial OpenGL window size. The function never returns! */
-void RayWindow::RayView(RayScene* s,int width,int height,int cplx){
+void RayWindow::RayView(RayScene* s,int width,int height,int cplx, char* video, float duration){
 	int drawMenu;
 	int cullMenu;
 	int curveFitMenu;
 	int argc=1;
+	strcpy(RayWindow::video, video);
 	char* argv[]={"foo"};
 
 
@@ -482,6 +506,11 @@ void RayWindow::RayView(RayScene* s,int width,int height,int cplx){
 	center=(b.p[0]+b.p[1])/2;
 	radius=(b.p[0]-b.p[1]).length()/2;
 	frameCountStart=GetTime();
+
+	if (strlen(video)) {
+		numRenderedFrames = 0;
+		totalFrames = duration * videoFrameRate;
+	}
 
 	// Initialize the OpenGL context
 	glutInit(&argc,argv);
@@ -501,7 +530,7 @@ void RayWindow::RayView(RayScene* s,int width,int height,int cplx){
 	glutMotionFunc			(MotionFunction);
 	glutPassiveMotionFunc	(PassiveMotionFunction);
 	glutVisibilityFunc		(VisibilityFunction);
-	glutIdleFunc			(IdleFunction);
+	glutIdleFunc(IdleFunction);
 
 	// Initialize the menus
 	drawMenu = glutCreateMenu(DrawModeMenu);

@@ -8,6 +8,7 @@
 
 static int DEFAULT_COMPLEXITY=10;
 static int DEFAULT_RESOLUTION=500;
+static float DEFAULT_DURATION = 1.0;
 
 
 void ShowUsage(char* c){
@@ -20,24 +21,28 @@ void ShowUsage(char* c){
 
 
 int main(int argc,char* argv[]){
-	char* paramNames[]={"in","width","height","cplx","factor"};
-	cmdLineReadable* params[5];
+	char* paramNames[]={"in","width","height","cplx","factor", "video", "duration"};
+	cmdLineReadable* params[7];
 	cmdLineString In;
 	cmdLineInt Width,Height,Cplx;
-	cmdLineString Factor;
+	cmdLineFloat Duration;
+	cmdLineString Factor, Video;
 	params[0]=&In;
 	params[1]=&Width;
 	params[2]=&Height;
 	params[3]=&Cplx;
 	params[4]=&Factor;
+	params[5] = &Video;
+	params[6] = &Duration;
 
 	RayScene scene;
 	int cplx=DEFAULT_COMPLEXITY;
 	int width=DEFAULT_RESOLUTION;
 	int height=DEFAULT_RESOLUTION;
+	float duration = DEFAULT_DURATION;
 	int f;
 
-	cmdLineParse(argc-1,&argv[1],paramNames,5,params);
+	cmdLineParse(argc-1,&argv[1],paramNames,7,params);
 	if(!In.set){
 		ShowUsage(argv[0]);
 		return EXIT_FAILURE;
@@ -45,6 +50,7 @@ int main(int argc,char* argv[]){
 	if(Width.set){width=Width.value;}
 	if(Height.set){height=Height.value;}
 	if(Cplx.set){cplx=Cplx.value;}
+	if (Duration.set) { duration = Duration.value; }
 	if(Factor.set){
 		if		(!strcasecmp(Factor.value,"matrix"))	{f=RayKeyData::MATRIX;}
 		else if	(!strcasecmp(Factor.value,"closest"))	{f=RayKeyData::CLOSEST_R_AND_TRANSLATION;}
@@ -59,6 +65,9 @@ int main(int argc,char* argv[]){
 	else{f=RayKeyData::MATRIX;}
 	scene.read(In.value,f);
 	scene.setCurrentTime(0);
-	RayWindow::RayView(&scene,width,height,cplx);
+	if (!Video.set)
+		RayWindow::RayView(&scene, width, height, cplx);
+	else 
+		RayWindow::RayView(&scene, width, height, cplx, Video.value, duration);
 	return EXIT_SUCCESS;
 }

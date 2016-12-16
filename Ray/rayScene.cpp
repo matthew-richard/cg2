@@ -820,8 +820,12 @@ void RayScene::drawOpenGL(void){
 void RayScene::setCurrentTime(double t,int curveFit){
 	int i;
 	for(i=0;i<keyFileNum;i++){
-		double tt=t/keyFiles[i].duration;
-		tt-=(int)tt;
+		double tt = 0;
+		if (t >= keyFiles[i].start)
+		{
+			double tt = (t - keyFiles[i].start) / keyFiles[i].duration;
+			tt -= (int)tt;
+		}
 		keyData[i].setCurrentValue(tt,curveFit);
 	}
 	for(i=0;i<rayFileNum;i++){rayFiles[i].scene->setCurrentTime(t,curveFit);}

@@ -232,5 +232,6 @@
     <None Include="SVD\SVDFit.inl">
       <Filter>Header Files</Filter>
     </None>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

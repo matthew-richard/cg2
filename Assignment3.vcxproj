@@ -314,6 +314,7 @@
     <ClInclude Include="Util\time.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
     <None Include="SVD\MatrixMNTC.inl" />
     <None Include="SVD\SVD.inl" />
     <None Include="SVD\SVDFit.inl" />

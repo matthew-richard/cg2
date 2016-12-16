@@ -11,6 +11,10 @@ class RayKeyFile{
 public:
 	/** This is the duration (in seconds) over which the animation is to play */
 	float duration;
+
+	/** This is the time at which the animation starts playing */
+	float start;
+
 	RayKeyFile(void);
 	~RayKeyFile(void);
 
