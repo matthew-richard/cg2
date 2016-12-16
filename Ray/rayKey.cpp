@@ -48,7 +48,7 @@ int RayKeyFile::read(char* fileName){
 	fp=fopen(fileName,"r");
 	if(!fp){return 0;}
 
-	if (fscanf(fp, " #START %d ", &start) != 1) {
+	if (fscanf(fp, " #START %f ", &start) != 1) {
 		fclose(fp);
 		return 0;
 	}
